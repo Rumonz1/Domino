@@ -61,6 +61,9 @@ public class Domino {
 
     String sign;
     public Domino(int x, int y) {
+        if (x < 0 || x > 6) {
+            throw new IllegalArgumentException("Значение стороны костяшки должно быть от 0 до 6");
+        }
         this.x = x;
         this.y = y;
         sign = "+";

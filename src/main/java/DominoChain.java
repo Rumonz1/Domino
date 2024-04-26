@@ -10,9 +10,12 @@ public class DominoChain {
     String sign;
 
     public DominoChain(int x, int y) {
-        this.x = x;
-        this.y = y;
-        sign = "+";
+        if (x < 0 || x > 6) {
+            throw new IllegalArgumentException("Значение стороны костяшки должно быть от 0 до 6");
+        }
+            this.x = x;
+            this.y = y;
+            sign = "+";
     }
 
 
@@ -76,18 +79,12 @@ public class DominoChain {
         Domino domino3 = new Domino(1, 6);
         Domino domino4 = new Domino(3, 2);
         Domino domino5 = new Domino(1, 2);
-        Domino domino6 = new Domino(1, 2);
-        Domino domino7 = new Domino(1, 2);
-        Domino domino8 = new Domino(1, 2);
         ArrayList<Domino> dominoArrayList1 = new ArrayList<>();
         dominoArrayList1.add(domino1);
         dominoArrayList1.add(domino2);
         dominoArrayList1.add(domino3);
         dominoArrayList1.add(domino4);
         dominoArrayList1.add(domino5);
-        dominoArrayList1.add(domino6);
-        dominoArrayList1.add(domino7);
-        dominoArrayList1.add(domino8);
 
 
 
